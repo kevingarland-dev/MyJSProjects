@@ -1,3 +1,4 @@
+
 import { View, Text, SafeAreaView, Button, TouchableOpacity, ScrollView, Image, headerShown, StatusBar, } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -7,7 +8,7 @@ import React,{ useEffect } from 'react';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import SimpleLineIcons from '@expo/vector-icons/SimpleLineIcons';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
-import DetailJames from "./screens/DetailJames"
+import DetailJames from "./screens/DetailJames";
 import { Header } from 'react-native/Libraries/NewAppScreen';
 import Calls from './screens/Calls';
 import Communities from './screens/Communities';
@@ -321,11 +322,11 @@ function HomeTabs() {
           headerShown: false,
           tabBarIcon: ({ color, size }) => {
             if (route.name === 'Chats') {
-              return <Ionicons name="chatbubbles-outline" size={size} color={color} />;
+              return <MaterialCommunityIcons name="android-messages" size={size} color={color} />;
             } else if (route.name === 'Communities') {
               return <MaterialCommunityIcons name="account-group-outline" size={size} color={color} />;
             } else if (route.name === 'Updates') {
-              return <Ionicons name="logo-ionic" size={24} color="black" />;
+              return <Ionicons name="logo-ionic" size={size} color={color} />;
             } else if (route.name === 'Calls') {
               return <Ionicons name="call-outline" size={size} color={color} />;
             }
